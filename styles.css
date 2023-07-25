@@ -77,6 +77,19 @@ right: 21%;
     border-radius: 100%;
 }
 
+.mouth{
+    width: 50%;
+    position: absolute;
+    content: '';
+    height: 12%;
+    border-radius: 100%;
+    box-shadow: -0.9vmin 1.7vmin 0 -1vmin;
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%) rotate(5deg);
+}
+
+
 /* @media screen and (min-width: 700px) {
     .cartoon {
       width: 20px;
