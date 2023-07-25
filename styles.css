@@ -203,14 +203,14 @@ z-index: 3;
   .earRight {
     width: 10%;
     height: 85%;
-    transform: translateX(17px);
+    transform: translateX(15px);
     background: hsl(24, 63%, 69%);
     border-radius: 0 100% 100% 0;
   }
   .earLeft {
     width: 10%;
     height: 85%;
-    transform: translateX(-18px) rotate(180deg);
+    transform: translateX(-15px) rotate(180deg);
     background: hsl(24, 63%, 69%);
     border-radius: 0 100% 100% 0;
   }
