@@ -1,1 +1,8 @@
-h1{font-size: 55px; text-align: center;}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(200,50%,12%);
+}
