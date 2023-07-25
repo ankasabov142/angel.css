@@ -1,34 +1,34 @@
 body {
+  /* set up beautiful background color */
   background: linear-gradient(to right, #ec6ead, #3494e6);
 }
+/* Design the main div container that will contain all of the css and html*/
 .cartoon {
   width: 90vmin;
   height: 90vmin;
   position: relative;
   left: 50%;
   transform: translate(-50%);
-  top: 55px;
+  top: 5%;
 }
-
+/* Design the face container that will contain all the elements of my face*/
 .face {
   position: relative;
   width: 45%;
   height: 60%;
   background: hsl(24, 60%, 71%);
   left: 50%;
-  top: 20%;
-  float: left;
+  top: 0%;
   transform: translate(-50%, 0);
   border-radius: 60% 60% 120% 120%;
 }
-/* hsl(24, 60%, 71%); */
+/* Do the eyes design */
 .eyes {
   position: absolute;
   justify-content: space-between;
   top: 30%;
   left: 50%;
   transform: translate(-50%);
-  /* width: 300px; */
   width: 70%;
   height: 70%;
   display: flex;
@@ -38,9 +38,7 @@ body {
   background-color: white;
   border-top: 4px solid hsl(24, 54%, 62%);
   border-bottom: 4px solid hsl(24, 54%, 62%);
-  /* width: 100px; */
   width: 33%;
-  /* height: 60px; */
   height: 14%;
   border-radius: 100%;
   display: flex;
@@ -52,13 +50,10 @@ body {
 
 .eye::before {
   content: "";
-  /* margin-right:14px; */
   right: 21%;
   top: 7%;
   position: absolute;
-  /* width: 70px; */
   width: 80%;
-  /* width: 70px; */
   height: 100%;
   background-color: #542a0e;
   border-radius: 100%;
@@ -70,13 +65,11 @@ body {
   top: 45%;
   left: 20%;
   width: 20%;
-  /* width: 20px; */
   height: 40%;
-  /* height: 20px; */
   background-color: #171313;
   border-radius: 100%;
 }
-
+/* Draw the mouth */
 .mouth {
   width: 50%;
   position: absolute;
@@ -88,7 +81,7 @@ body {
   left: 50%;
   transform: translateX(-50%) rotate(5deg);
 }
-
+/* Create the nose */
 .nose {
   width: 20%;
   height: 12%;
@@ -101,7 +94,7 @@ body {
   position: absolute;
   content: "";
 }
-
+/* Get the brows done */
 .brows {
   position: absolute;
   justify-content: space-between;
@@ -123,6 +116,7 @@ body {
   border-bottom: 18px solid hsl(24, 60%, 71%);
   border-radius: 100%;
 }
+/* Do the ears design */
 .ears {
   position: absolute;
   justify-content: space-between;
@@ -143,52 +137,83 @@ body {
   border-radius: 0 100% 100% 0;
   position: relative;
 }
+
 .earLeft {
-position: relative;
+  position: relative;
   width: 10%;
   height: 85%;
   transform: translateX(-28px) rotate(180deg);
-z-index: 3;
+  z-index: 3;
   background: hsl(24, 63%, 69%);
   border-radius: 0 100% 100% 0;
 }
-
+/* Do the hair design */
 .hair {
-    width: 100%;
-    height: 30%;
-    background: #321E1E;
-    top:0%;
-    left: 51%;
-    float: right;
-    position: absolute;
-    border-radius: 20vmin 25vmin 20vmin 10vmin / 100%;
-    transform: translate(-50%, 0) translateY(-30px) ;
+  width: 100%;
+  height: 30%;
+  background: #321e1e;
+  top: 0%;
+  left: 51%;
+  position: absolute;
+  border-radius: 20vmin 25vmin 20vmin 10vmin / 100%;
+  transform: translate(-50%, 0) translateY(-30px);
+}
+/* Do the side of my hair design*/
+.hair-back {
+  position: relative;
+  width: 48%;
+  height: 25%;
+  border-radius: 40% / 100%;
+  background: #321e1e;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+
+/* Animanting the text and making its design  */
+.text {
+  font-family: "Abril Fatface", sans-serif;
+  background: linear-gradient(to right, crimson, pink, springgreen);
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 1);
+  font-size: 4rem;
+  width: 100vw;
+  margin: 3px;
+  display: inline-block;
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.text:hover {
+  color: rgba(0, 0, 0, 0);
+}
+@keyframes rainbow {
+  0% {
+    background-position: left;
   }
-
-  /* .hair::after {
-    width: 4vmin;
-    height: 4vmin;
-    border-radius: 50%;
-    top: 90%;
-    left: 38%;
-    position: relative;
-    box-shadow: inset -1vmin 0.5vmin darkblue;
-  } */
-
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+/* Making the design responsive  */
+@media only screen and (max-width: 600px) {
   .hair-back {
     position: relative;
-    width: 48%;
-    height: 25%;
+    width: 50%;
+    height: 26%;
     border-radius: 40% / 100%;
-    background: #321E1E;
-    top: 60%;
-    left:50%;
-    float: clear;
-    transform: translate(-50%,-90%);
+    background: #321e1e;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -90%);
   }
-
-
-@media only screen and (max-width: 600px) {
   .brow {
     justify-content: center;
     align-items: center;
@@ -196,7 +221,6 @@ z-index: 3;
     width: 34%;
     margin-top: 6%;
     border-top: 8px solid black;
-    /* /border-bottom: 18px solid hsl(24, 60%, 71%); */
     border-radius: 100%;
   }
 
@@ -215,5 +239,3 @@ z-index: 3;
     border-radius: 0 100% 100% 0;
   }
 }
-
-
