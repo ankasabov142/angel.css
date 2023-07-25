@@ -22,7 +22,7 @@ body {
   border-radius: 60% 60% 120% 120%;
 }
 /* hsl(24, 60%, 71%); */
-.eyes {
+.eyes  {
   position: absolute;
   justify-content: space-between;
   top: 30%;
@@ -101,6 +101,12 @@ right: 21%;
     position: absolute;
     content: '';
   }
+
+  .brows{
+    position:absolute;
+    top:0%
+  }
+ 
 
 
 /* @media screen and (min-width: 700px) {
