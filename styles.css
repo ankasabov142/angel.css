@@ -111,6 +111,8 @@ body {
 }
 /* Draw the mouth */
 .mouth {
+  --rotation: 5deg;
+  --translation: -50%;
   width: 50%;
   position: absolute;
   content: "";
@@ -119,7 +121,7 @@ body {
   box-shadow: -0.9vmin 1.7vmin 0 -1vmin;
   top: 66%;
   left: 50%;
-  transform: translateX(-50%) rotate(5deg);
+  transform: translateX(var(--translation)) rotate(var(--rotation));
 }
 /* Create the nose */
 .nose {
@@ -138,7 +140,7 @@ body {
 .brows {
   position: absolute;
   justify-content: space-between;
-  top: 20%;
+  top: 22%;
   left: 50%;
   transform: translate(-50%);
   width: 70%;
@@ -231,6 +233,7 @@ body {
 .text:hover {
   color: rgba(0, 0, 0, 0);
 }
+
 @keyframes rainbow {
   0% {
     background-position: left;
@@ -242,6 +245,48 @@ body {
     background-position: left;
   }
 }
+
+/* face animation on-hover */
+.cartoon *,
+.cartoon *::before,
+.cartoon *::after {
+  transition: all 380ms ease-in-out;
+}
+
+/* eyes */
+.cartoon:hover .eye::before {
+  top: 1%;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.cartoon:hover .eye::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* eyebrows */
+.cartoon:hover .brows {
+  top: 20%;
+}
+
+.cartoon:hover .brow:nth-child(1) {
+  transform: skewY(-10deg);
+}
+
+.cartoon:hover .brow:nth-child(2) {
+  transform: skewY(10deg);
+}
+
+/* smile */
+.cartoon:hover .mouth {
+  width: 60%;
+  box-shadow: 0 1.7vmin 0 -1vmin;
+  transform: translateX(var(--translation))
+    rotate(calc(var(--rotation) - 10deg));
+}
+
 /* Making the design responsive  */
 @media only screen and (max-width: 600px) {
   .hair-back {
@@ -309,6 +354,6 @@ body {
     width: 18%;
     height: 32px;
     border-left: 6px solid #93a2ab;
-    transform: rotate(90deg) translate(20px,-1px);
+    transform: rotate(90deg) translate(20px, -1px);
   }
 }
