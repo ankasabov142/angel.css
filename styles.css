@@ -109,7 +109,7 @@ body {
   background-color: #171313;
   border-radius: 100%;
 }
-/* Draw the mouth */
+/* Draw the mouth  */
 .mouth {
   --rotation: 5deg;
   --translation: -50%;
